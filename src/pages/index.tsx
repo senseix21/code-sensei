@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 import { ReactElement } from 'react';
 import RootLayout from '@/components/RootLayout';
 import HeroBanner from '@/components/Hero';
-import About from '@/components/ui/About';
+import About from '@/components/About';
 import { GetStaticProps, NextPage } from 'next';
 import { Project } from '@/interfaces';
 import Projects from '@/components/Projects';
@@ -75,15 +75,13 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     const res = await fetch('http://localhost:5000/projects');
     const projects = await res.json();
 
-    // Convert the object properties into an array
-    // const projects: Project[] = Object.values(data?.projects);
-
     // Return the fetched data as props
     return {
       props: {
         projects,
       },
     };
+
   } catch (error) {
     // Handle any errors that might occur during the data fetching process
     console.error('Error fetching data:', error);
