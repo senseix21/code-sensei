@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { AiFillCode } from 'react-icons/ai'
 
@@ -11,10 +12,10 @@ export default function Footer(): React.JSX.Element {
             </div>
 
             <div>
-                <span className="footer-title">Legal</span>
-                <a className="link link-hover">Terms of use</a>
-                <a className="link link-hover">Privacy policy</a>
-                <a className="link link-hover">Cookie policy</a>
+                <Link href={'/legals'} className="footer-title">Legal</Link>
+                <Link href='/legals/#terms-of-use' className="link link-hover">Terms of use</Link>
+                <Link href='/legals/#privacy-policy' className="link link-hover">Privacy policy</Link>
+                <Link href='/legals/#cookie-policy' className="link link-hover">Cookie policy</Link>
             </div>
             <div>
                 <span className="footer-title">Newsletter</span>
