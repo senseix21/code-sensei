@@ -14,25 +14,19 @@ const Navbar: React.FC = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl"><AiFillCode className="text-orange-600 text-xl" /> CODE-SENSEI</a>
+                <a className="btn btn-ghost normal-case text-xl"><AiFillCode className="text-secondary text-2xl" /> CODE-SENSEI</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li tabIndex={0}>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Projects</a></li>
+                    <li><a>Skills</a></li>
+                    <li><a>Contact</a></li>
+                    <li><a>Blog</a></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-orange-700 btn-md text-white">Resume</a>
+                <a href={'https://docs.google.com/document/d/16yz1jpeN2g8djZvLkq0e8vQUKwfjarKGohPhFWIuPOU/edit?usp=sharing'} className="btn bg-secondary btn-md text-white">Resume</a>
             </div>
         </div>
     );

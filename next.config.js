@@ -5,13 +5,6 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'ibb.co',
-        port: '',
-        pathname: '',
-      },
-    ],
+    domains: ['i.ibb.co'],
   },
-}
+};
