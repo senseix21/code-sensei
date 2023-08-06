@@ -19,23 +19,40 @@ interface HomeProps {
 const Home: NextPage<HomeProps> = ({ projects }) => {
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`} >
-      <HeroBanner />
-      <About />
-      <div className='mt-10'>
-        <div className="flex flex-col text-center w-full mb-10">
-          <h1 className="text-3xl font-bold title-font mb-4 text-accent-content">
-            <span className='text-accent'>🚀 Beyond the Stratosphere: <br /></span>Projects that Reach New Heights(hopefully) 🌌
+      <div id='home'>
+        <HeroBanner />
+      </div>
 
-          </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Embark on a journey beyond the stratosphere! Together, we'll launch projects that soar to new heights,
-            leaving a lasting impact on the digital landscape.
-          </p>
+      <div id='about'>
+        <About />
+      </div>
+
+      <div id='projects'>
+        <div className='mt-10' >
+          <div className="flex flex-col text-center w-full mb-10">
+            <h1 className="text-3xl font-bold title-font mb-4 text-accent-content">
+              <span className='text-accent'>🚀 Beyond the Stratosphere: <br /></span>Projects that Reach New Heights(hopefully) 🌌
+
+            </h1>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+              Embark on a journey beyond the stratosphere! Together, we'll launch projects that soar to new heights,
+              leaving a lasting impact on the digital landscape.
+            </p>
+          </div>
+          <Projects projects={projects} />
         </div>
-        <Projects projects={projects} />
-        <Skills />
-        <CTA />
-        <BlogSection />
+
+        <div id='skills'>
+          <Skills />
+        </div>
+
+        <div id='contact'>
+          <CTA />
+        </div>
+
+        <div id='blog'>
+          <BlogSection />
+        </div>
       </div>
     </main>
   );
