@@ -127,11 +127,4 @@ const Legals = () => {
 
 export default Legals;
 
-(Legals as any).getLayout = function getLayout(page: ReactElement) {
-    return (
-        <RootLayout>
-            {page}
-        </RootLayout>
-    );
-};
 
