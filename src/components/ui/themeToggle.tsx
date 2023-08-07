@@ -11,13 +11,18 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ darkTheme, setDarkTheme }) =>
     };
 
     return (
-        <input
-            className=" toggle bg-secondary  py-2 px-4 rounded-xl "
-            type='checkbox'
-            onClick={handleToggle}
-        >
-            {/* {darkTheme ? 'light' : 'dark'} */}
-        </input>
+        <>
+            <div className='mr-2 font-bold'>
+                {darkTheme ? 'light' : 'dark'}
+
+            </div>
+            <input
+                className=" toggle bg-secondary  py-2 px-4 rounded-xl "
+                type='checkbox'
+                onClick={handleToggle}
+            >
+            </input>
+        </>
     );
 };
 

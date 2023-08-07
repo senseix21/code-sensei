@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkTheme, setDarkTheme }) => {
                     <li><Link href='/#projects'>Projects</Link></li>
                     <li><Link href='/#skills'>Skills</Link></li>
                     <li><Link href='/#contact'>Contact</Link></li>
-                    <li><Link href='/#blog'>Blog</Link></li>
+                    <li><Link href='/blogs'>Blog</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
