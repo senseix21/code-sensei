@@ -13,7 +13,7 @@ import Head from 'next/head';
 
 export const meta = {
   title: 'CODE-SENSEI | FullStack Software Developer',
-  description: 'Welcome to my portfolio website. I showcase my skills and projects as a Full Stack Developer.',
+  description: "Welcome to SENSEI's Portfolio. I am a passionate Fullstack dev  with expertise in TS,JS,NODE,Express,Mongoose,Postgre, React, Redux, Postgre etc. Explore my diverse collection of projects showcasing my creativity and problem-solving abilities. From web development to design, my portfolio demonstrates my dedication to delivering exceptional digital experiences. Get inspired and contact me for collaborations and opportunities",
   keywords: 'portfolio, Full Stack Developer, projects, web development,code-sensei, codesensei',
   author: 'SENSEI aka Mehedi Hasan',
 };
