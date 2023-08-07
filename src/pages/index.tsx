@@ -48,7 +48,7 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
           <div className='mt-10' >
             <div className="flex flex-col text-center w-full mb-10">
               <h1 className="text-3xl font-bold title-font mb-4 text-accent-content">
-                <span className='text-accent'>🚀 Beyond the Stratosphere: <br /></span>Projects that Reach New Heights(hopefully) 🌌
+                <span className='text-accent'>🚀 Beyond the Stratosphere: <br /></span>Projects that Reach New Heights(hopefully😁) 🌌
 
               </h1>
               <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
