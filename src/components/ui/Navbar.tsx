@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkTheme, setDarkTheme }) => {
                         <li><Link href='/#blog'>Blog</Link></li>
                     </ul>
                 </div>
-                <Link href={'/'} className="btn btn-ghost normal-case text-xl"><AiFillCode className="text-secondary text-2xl" /> CODE-SENSEI</Link>
+                <Link href={'/'} className="btn btn-ghost normal-case lg:text-xl"><AiFillCode className="text-secondary lg:text-2xl " /> CODE-SENSEI</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -40,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkTheme, setDarkTheme }) => {
             </div>
             <div className="navbar-end">
                 <ThemeToggle darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-                <Link href={'https://docs.google.com/document/d/16yz1jpeN2g8djZvLkq0e8vQUKwfjarKGohPhFWIuPOU/edit?usp=sharing'} className="btn bg-secondary btn-md text-white">Resume</Link>
+                <Link href={'https://docs.google.com/document/d/16yz1jpeN2g8djZvLkq0e8vQUKwfjarKGohPhFWIuPOU/edit?usp=sharing'} className="btn bg-secondary btn-sm lg:btn-md text-white">Resume</Link>
             </div>
         </div>
     );

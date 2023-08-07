@@ -12,7 +12,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ darkTheme, setDarkTheme }) =>
 
     return (
         <>
-            <div className='mr-2 font-bold'>
+            <div className='mr-2 lg:font-bold lg:block hidden'>
                 {darkTheme ? 'light' : 'dark'}
 
             </div>
