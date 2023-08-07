@@ -69,10 +69,3 @@ const Blogs: React.FC = () => {
 
 export default Blogs;
 
-(Blogs as any).getLayout = function getLayout(page: ReactElement) {
-    return (
-        <RootLayout>
-            {page}
-        </RootLayout>
-    );
-};

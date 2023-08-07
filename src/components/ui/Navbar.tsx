@@ -1,8 +1,15 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { AiFillCode } from 'react-icons/ai';
+import ThemeToggle from './themeToggle';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+    darkTheme: boolean;
+    setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ darkTheme, setDarkTheme }) => {
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -32,6 +39,7 @@ const Navbar: React.FC = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <ThemeToggle darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
                 <Link href={'https://docs.google.com/document/d/16yz1jpeN2g8djZvLkq0e8vQUKwfjarKGohPhFWIuPOU/edit?usp=sharing'} className="btn bg-secondary btn-md text-white">Resume</Link>
             </div>
         </div>

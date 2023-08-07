@@ -31,7 +31,7 @@ const BlogSection: React.FC = () => {
     ];
 
     return (
-        <section className="text-gray-300 body-font">
+        <section className="text-base-600 body-font">
             <h1 className="text-3xl font-bold text-center title-font mb-4 text-accent-content">
                 <span className='text-secondary'>🎯👨‍💻💥 Latest Blogs & </span>Tech news! 🔥💻🚀
             </h1>

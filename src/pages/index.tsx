@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 import RootLayout from '@/components/RootLayout';
 import HeroBanner from '@/components/Hero';
 import About from '@/components/About';
@@ -26,6 +26,10 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ projects }) => {
   console.log(projects);
+  const [darkTheme, setDarkTheme] = useState(false);
+  const handleToggleTheme = () => {
+    setDarkTheme((prevTheme) => !prevTheme);
+  };
   return (
     <div>
       <Head>
@@ -35,7 +39,7 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
         <meta name="author" content={meta.author} />
         {/* Add other required meta tags if needed */}
       </Head>
-      <main className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`} >
+      <main className={`flex min-h-screen flex-col items-center justify-between p-24 text-base ${inter.className}`} >
         <div id='home'>
           <HeroBanner />
         </div>
@@ -76,13 +80,6 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
   );
 };
 
-(Home as any).getLayout = function getLayout(page: ReactElement) {
-  return (
-    <RootLayout>
-      {page}
-    </RootLayout>
-  );
-};
 
 export default Home;
 
