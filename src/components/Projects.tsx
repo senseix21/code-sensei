@@ -10,7 +10,6 @@ interface ProjectProps {
 
 const Projects: NextPage<ProjectProps> = ({ projects }) => {
     const data = projects;
-    console.log(data);
     return (
         <div className='grid lg:grid-cols-2 gap-10'>
             {data?.map((project) => (

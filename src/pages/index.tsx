@@ -4,7 +4,7 @@ import RootLayout from '@/components/RootLayout';
 import HeroBanner from '@/components/Hero';
 import About from '@/components/About';
 import { GetStaticProps, NextPage } from 'next';
-import { Project } from '@/interfaces';
+import { BlogData, BlogEntry, Project } from '@/interfaces';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import CTA from '@/components/CTA';
@@ -20,16 +20,18 @@ export const meta = {
 
 const inter = Inter({ subsets: ['latin'] });
 
+
+
 interface HomeProps {
   projects: Project[];
+  blogs: BlogData[];
 }
 
-const Home: NextPage<HomeProps> = ({ projects }) => {
-  console.log(projects);
-  const [darkTheme, setDarkTheme] = useState(false);
-  const handleToggleTheme = () => {
-    setDarkTheme((prevTheme) => !prevTheme);
-  };
+
+const Home: NextPage<HomeProps> = ({ projects, blogs }) => {
+
+  blogs = blogs.slice(0, 3)
+
   return (
     <div>
       <Head>
@@ -72,7 +74,7 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
           </div>
 
           <div id='blog'>
-            <BlogSection />
+            <BlogSection data={blogs} />
           </div>
         </div>
       </main>
@@ -86,15 +88,17 @@ export default Home;
 // Implement getStaticProps to fetch the data during build time
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   try {
-    // Replace with the JSON data file path or API endpoint
-    // const res = await fetch('http://localhost:5000/projects');
     const res = await fetch('https://code-sensei-backend.vercel.app/projects');
     const projects = await res.json();
+
+    const resBlogs = await fetch('https://code-sensei-backend.vercel.app/blogs');
+    const blogs = await resBlogs.json();
+
 
     // Return the fetched data as props
     return {
       props: {
-        projects,
+        projects, blogs
       },
     };
 
@@ -103,9 +107,12 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     console.error('Error fetching data:', error);
     return {
       props: {
-        projects: [], // Return an empty array or default value to avoid errors
+        projects: [],
+        blogs: []// Return an empty array or default value to avoid errors
       },
     };
   }
 };
+
+
 
