@@ -1,20 +1,7 @@
+import { BlogData } from '@/interfaces';
 import { NextPage } from 'next';
 import React from 'react';
 
-interface Section {
-    title: string;
-    content: string;
-    code: string;
-    note: string | undefined;
-}
-
-interface BlogData {
-    title: string;
-    description: string;
-    image: string;
-    sections: Section[];
-    tags: string[];
-}
 
 interface BlogProps {
     data: BlogData;
